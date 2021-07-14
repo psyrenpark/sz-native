@@ -1,0 +1,14 @@
+<!-- AndroidManifest.xml -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="sv.sznative">
+
+    <application>
+        <activity
+            android:name=".ExampleActivity"
+            android:label="@string/title_activity_example"
+        />
+        
+    </application>
+
+</manifest>
