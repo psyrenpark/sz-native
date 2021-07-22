@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   Button,
   Platform,
@@ -17,35 +17,35 @@ import {
 } from 'sz-native';
 
 const App = () => {
-  const test1 = async params => {
+  const test1 = async (params) => {
     // if (Platform.OS === 'android') {
     // SzNativeModule.testToastShow('test');
     SzNativeModule.testToastShow('test');
     // }
   };
 
-  const test2 = async params => {
+  const test2 = async (params) => {
     // if (Platform.OS === 'android') {
     SzNativeModule.testCallBack(
       't123',
       1123,
-      data => {
+      (data) => {
         console.log('log -> -------------------------------------------');
         console.log('log -> ~ SzNativeModule.testCallBack ~ data', data);
         console.log('log -> -------------------------------------------');
         return '';
       },
-      error => {
+      (error) => {
         console.log('log -> -------------------------------------------');
         console.log('log -> ~ SzNativeModule.testCallBack ~ error', error);
         console.log('log -> -------------------------------------------');
         return '';
-      },
+      }
     );
     // }
   };
 
-  const test3 = async params => {
+  const test3 = async (params) => {
     // if (Platform.OS === 'android') {
     const data = await SzNativeModule.testCallBackToAsync('t123', 1123);
     console.log('log -> -------------------------');
@@ -54,7 +54,7 @@ const App = () => {
     // }
   };
 
-  const test4 = async params => {
+  const test4 = async (params) => {
     if (Platform.OS === 'android') {
       SzNativeModule.testStartActivity('123', 111);
     } else if (Platform.OS === 'ios') {
@@ -62,29 +62,31 @@ const App = () => {
     }
   };
 
-  const test5 = async params => {
+  const test5 = async (params) => {
     if (Platform.OS === 'android') {
       SzNativeModule.testCreateEvent('12312312');
       // SzNativeEventEmitterModule.testEmitEvent('!2312');
     } else if (Platform.OS === 'ios') {
       // EventEmitter.testCreateEvent('123');
+      // SzNativeModule.testCreateEvent('12312312');
+      SzNativeEventEmitterModule.testEmitEvent('!2312');
     }
   };
 
-  // useEffect(() => {
-  //   const eventEmitter = new NativeEventEmitter(SzNativeEventEmitterModule);
-  //   const eventListener = eventEmitter.addListener('EventReminder', event => {
-  //     console.log('log -> ---------------------------------');
-  //     console.log('log -> ~ useEffect ~ event', event);
-  //     console.log('log -> ---------------------------------');
-  //     Alert.alert('event', JSON.stringify(event, null, 3), [
-  //       {text: 'ok', onPress: () => {}},
-  //     ]);
-  //   });
-  //   return () => {
-  //     eventListener.remove();
-  //   };
-  // }, []);
+  useEffect(() => {
+    const eventEmitter = new NativeEventEmitter(SzNativeEventEmitterModule);
+    const eventListener = eventEmitter.addListener('EventReminder', (event) => {
+      console.log('log -> ---------------------------------');
+      console.log('log -> ~ useEffect ~ event', event);
+      console.log('log -> ---------------------------------');
+      Alert.alert('event', JSON.stringify(event, null, 3), [
+        { text: 'ok', onPress: () => {} },
+      ]);
+    });
+    return () => {
+      eventListener.remove();
+    };
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>

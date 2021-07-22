@@ -8,7 +8,7 @@
 #import <React/RCTLog.h>
 
 #import "SzNative.h"
-// #import "SzNativeEventEmitter.h"
+#import "SzNativeEventEmitter.h"
 
 @implementation SzNative
 
@@ -71,10 +71,19 @@ RCT_EXPORT_METHOD(testCallBackToAsync:(NSString *)stringArgument
 // }
 
 
-// RCT_EXPORT_METHOD(testCreateEvent: (NSString *)name numberParameter:(nonnull NSNumber *)age)
-// {
-    
-// }
+ RCT_EXPORT_METHOD(testCreateEvent: (NSString *)name numberParameter:(nonnull NSNumber *)age)
+ {
+//     SzNativeEventEmitter.emitter.sendEvent(withName: "EventReminder", body: [])
+//     SzNativeEventEmitter.emitter.sendEvent(withName: "EventReminder",  body:@{@"name": name}])
+     
+     SzNativeEventEmitter.emitEvent("test")
+     
+     
+//     RCTBridge *reactBridge = [self.appDelegate reactBridge];
+//     EventEmitter *eventEmitter = [bridge moduleForName:@"SzNativeEventEmitter"];
+//     [eventEmitter emitEvent:@"Hello from iOS event emitter!"];
+
+ }
 
 
 
