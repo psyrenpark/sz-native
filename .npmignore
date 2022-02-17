@@ -8,3 +8,5 @@ tsconfig.json
 test/
 OTHER.md
 example/*
+
+deploy.sh

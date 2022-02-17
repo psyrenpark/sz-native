@@ -42,7 +42,7 @@ interface BrightnessModuleInterface {
 
 interface LocalizeTimeModuleInterface {
   getConstants(): any;
-  getLocalizeTimeStringAsync(): Promise<any>;
+  getLocalizeTimeStringAsync(_date: number, format: string): Promise<any>;
   // getLocalizeTimeString(): string;
 }
 

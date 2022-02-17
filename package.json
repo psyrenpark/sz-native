@@ -1,7 +1,7 @@
 {
   "name": "@psyrenpark/sz-native",
   "title": "Sz Native",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "TODO",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
