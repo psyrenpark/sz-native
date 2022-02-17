@@ -9,7 +9,19 @@ interface SzNativeModuleInterface {
 interface SzNativeEventEmitterModuleInterface {
     testEmitEvent(message: string): void;
 }
+interface BrightnessModuleInterface {
+    getConstants(): any;
+    getBrightness(): Promise<any>;
+    setBrightness(brightness: number): Promise<String>;
+}
+interface LocalizeTimeModuleInterface {
+    getConstants(): any;
+    getLocalizeTimeStringAsync(): Promise<any>;
+}
+export declare const Counter: any;
 export declare const SzNativeManager: any;
 export declare const SzNativeEventEmitterModule: SzNativeEventEmitterModuleInterface;
 export declare const SzNativeModule: SzNativeModuleInterface;
+export declare const BrightnessModule: BrightnessModuleInterface;
+export declare const LocalizeTimeModule: LocalizeTimeModuleInterface;
 export {};

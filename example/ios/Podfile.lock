@@ -1,4 +1,5 @@
 PODS:
+  - AdPieSDK (1.2.10)
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -316,8 +317,9 @@ PODS:
     - React-cxxreact (= 0.64.2)
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
-  - sz-native (1.0.0):
-    - React
+  - sz-native (0.0.5):
+    - AdPieSDK
+    - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -376,6 +378,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AdPieSDK
     - boost-for-react-native
     - CocoaAsyncSocket
     - Flipper
@@ -450,6 +453,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AdPieSDK: d425fe03ec3ff67a05b71b2ee6129169317f3e75
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
@@ -488,10 +492,10 @@ SPEC CHECKSUMS:
   React-RCTVibration: 24600e3b1aaa77126989bc58b6747509a1ba14f3
   React-runtimeexecutor: a9904c6d0218fb9f8b19d6dd88607225927668f9
   ReactCommon: 149906e01aa51142707a10665185db879898e966
-  sz-native: 8fb31d90d62662775c7722685dcd663264830251
+  sz-native: 82266eec2d6df24cae60e6957ac1ac8ace7315c3
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: 52d4730468a14603cf036e5a7bed6dd442161ac8
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

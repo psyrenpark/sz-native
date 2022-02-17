@@ -46,7 +46,7 @@ yarn android
 - xcode 에서 open할 폴더 경로를 [경로]/example/ios 로 열고 빌드
 - android studio 에서 open할 폴더 경로를 [경로]/example/android로 열고 빌드
 
-## native magration 작업후 type 지적 필요
+## native migration 작업후 type 지적 필요
 
 - [경로]/src/index.ts 에서 추가된 내용 정의 필요
 - [경로] yarn run build

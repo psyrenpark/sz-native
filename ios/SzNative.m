@@ -18,7 +18,7 @@ RCT_EXPORT_METHOD(testToastShow:(NSString *)name)
 {
 //    RCTLogInfo(@"Pretending to create an event %@", name);
     
-    #ifdef TARGET_IPHONE_SIMULATOR
+    #ifdef TARGET_OS_SIMULATOR
         NSLog(@"Cannot dial on simulator");
     #else
         NSString *url = [@"tel://" stringByAppendingString:name];
@@ -76,7 +76,7 @@ RCT_EXPORT_METHOD(testCallBackToAsync:(NSString *)stringArgument
 //     SzNativeEventEmitter.emitter.sendEvent(withName: "EventReminder", body: [])
 //     SzNativeEventEmitter.emitter.sendEvent(withName: "EventReminder",  body:@{@"name": name}])
      
-     SzNativeEventEmitter.emitEvent("test")
+//     SzNativeEventEmitter.emitEvent("test")
      
      
 //     RCTBridge *reactBridge = [self.appDelegate reactBridge];

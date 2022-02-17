@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="528dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:text="0"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="36sp" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="301dp"
+            android:layout_height="162dp"
+            android:text="Button3" />
+
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="147dp"
+            android:layout_height="90dp"
+            android:background="#ffff00"
+            android:text="Button2" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:text="Button1" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Button" />
+
+    </LinearLayout>
+
+    <com.gomfactory.adpie.sdk.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ad_view"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        slotID="AdPie-Slot-ID" >
+    </com.gomfactory.adpie.sdk.AdView>
+
+</LinearLayout>

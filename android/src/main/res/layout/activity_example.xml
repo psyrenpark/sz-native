@@ -66,4 +66,14 @@
             />
     </LinearLayout>
 
+
+    <com.gomfactory.adpie.sdk.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ad_view"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        slotID="AdPie-Slot-ID" >
+    </com.gomfactory.adpie.sdk.AdView>
+
 </LinearLayout>

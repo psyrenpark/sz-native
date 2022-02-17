@@ -8,6 +8,20 @@
             android:name=".ExampleActivity"
             android:label="@string/title_activity_example"
         />
+
+        <activity android:name="com.gomfactory.adpie.sdk.InAppBrowser"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:launchMode="singleTop"
+        android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name="com.gomfactory.adpie.sdk.InterstitialActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name="com.gomfactory.adpie.sdk.videoads.VideoFullScreenActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <meta-data android:name="com.google.android.gms.version"
+                    android:value="@integer/google_play_services_version" />
         
     </application>
 

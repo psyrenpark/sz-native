@@ -2,6 +2,7 @@ package sv.sznative;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -10,16 +11,12 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.Nullable;
 
 import com.facebook.react.ReactActivity;
-import com.facebook.react.ReactInstanceManager;
-import com.facebook.react.ReactNativeHost;
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.CatalystInstance;
-import com.facebook.react.bridge.ReactContext;
-import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.bridge.WritableNativeArray;
+import com.gomfactory.adpie.sdk.AdView;
 
 
 public final class ExampleActivity extends ReactActivity {
+
+    private AdView adView;
 
     @Override
     @CallSuper
@@ -101,5 +98,34 @@ public final class ExampleActivity extends ReactActivity {
 //                 }
             }
         });
+
+
+        adView = (AdView) findViewById(R.id.ad_view);
+        adView.setSlotId("57342e0d7174ea39844cac13");
+
+        adView.setAdListener(new com.gomfactory.adpie.sdk.AdView.AdListener() {
+
+             @Override
+             public void onAdLoaded() {
+                 // 광고 표출 성공 후 이벤트 발생
+                 Log.d("pppppp", "onAdLoaded");
+             }
+
+             @Override
+             public void onAdFailedToLoad(int errorCode) {
+                 // 광고 요청 또는 표출 실패 후 이벤트 발생
+                 // error message -> AdPieError.getMessage(errorCode)
+                 Log.d("pppppp", "onAdFailedToLoad");
+                 Log.d("pppppp",String.valueOf(errorCode));
+             }
+
+             @Override
+             public void onAdClicked() {
+                 // 광고 클릭 후 이벤트 발생
+                 Log.d("pppppp", "onAdClicked");
+             }
+         });
+        adView.load();
+
     }
 }

@@ -10,9 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "react": "17.0.1",
-    "react-native": "0.64.2",
-    "sz-native": "link:../"
+    "@psyrenpark/sz-native": "link:../",
+    "dayjs": "^1.10.7",
+    "react": "17.0.2",
+    "react-native": "0.64.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

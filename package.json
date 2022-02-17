@@ -1,9 +1,10 @@
 {
-  "name": "sz-native",
+  "name": "@psyrenpark/sz-native",
   "title": "Sz Native",
-  "version": "1.0.0",
+  "version": "0.0.5",
   "description": "TODO",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "README.md",
     "android",
@@ -25,10 +26,14 @@
   "keywords": [
     "react-native"
   ],
-  "author": {
-    "name": "psyrenpark",
-    "email": "psyrenpark@gmail.com"
-  },
+  "moduleFileExtensions": [
+    "js",
+    "jsx",
+    "json",
+    "ts",
+    "tsx"
+  ],
+  "author": "psyrenpark@gmail.com",
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
