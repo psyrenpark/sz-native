@@ -43,11 +43,13 @@ class LocalizeTimeModule : NSObject {
         
         let formatter = DateFormatter()
         
-//        let locale = NSLocale.current.languageCode;
-        let localeID = Locale.preferredLanguages.first
-        let locale = (Locale(identifier: localeID!).languageCode)!
-        
-        formatter.locale = Locale(identifier: locale) // 로케일 변경
+       
+        // let localeID = Locale.preferredLanguages.first
+        // let locale = (Locale(identifier: localeID!).languageCode)!
+        // formatter.locale = Locale(identifier: locale) // 로케일 변경
+
+        let locale = NSLocale.current.languageCode;
+        formatter.locale = Locale(identifier: locale!) // 로케일 변경
         formatter.setLocalizedDateFormatFromTemplate("dd MMMM")
         
         if(_format != "") {
