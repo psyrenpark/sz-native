@@ -17,6 +17,7 @@ interface BrightnessModuleInterface {
 interface LocalizeTimeModuleInterface {
     getConstants(): any;
     getLocalizeTimeStringAsync(_date: number, format: string): Promise<any>;
+    getLocalizeTimeStringAsyncV2(_date: number, format: string): Promise<any>;
 }
 export declare const Counter: any;
 export declare const SzNativeManager: any;

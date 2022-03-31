@@ -8,8 +8,8 @@ const react_native_1 = require("react-native");
 //   null
 // );
 // export const Counter = requireNativeComponent('Counter', null) as CounterComponentInterface;
-exports.Counter = react_native_1.requireNativeComponent("Counter", null);
-exports.SzNativeManager = react_native_1.requireNativeComponent("SzNativeManager", null);
+exports.Counter = (0, react_native_1.requireNativeComponent)("Counter", null);
+exports.SzNativeManager = (0, react_native_1.requireNativeComponent)("SzNativeManager", null);
 exports.SzNativeEventEmitterModule = react_native_1.NativeModules.SzNativeEventEmitter;
 exports.SzNativeModule = react_native_1.NativeModules.SzNative;
 exports.BrightnessModule = react_native_1.NativeModules.BrightnessModule;

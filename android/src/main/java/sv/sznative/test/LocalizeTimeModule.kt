@@ -35,6 +35,18 @@ class LocalizeTimeModule(reactContext: ReactApplicationContext) : ReactContextBa
         promise.resolve(convertedDate)
     }
 
+    @ReactMethod
+    fun getLocalizeTimeStringAsyncV2(_timestamp: Double?, _format: String?, promise: Promise) {
+
+        val time = if (_timestamp is Double) _timestamp.toLong() else System.currentTimeMillis()
+        val format = if (_format is String) _format else "MM dd"
+
+        val bestDateFormat = DateFormat.getBestDateTimePattern(Locale.getDefault(), _format);
+        val dateFormat = SimpleDateFormat(bestDateFormat)
+        val convertedDate = dateFormat.format(Date(time))
+        promise.resolve(convertedDate)
+    }
+
 //    @ReactMethod
 //    fun getLocalizeTimeString(_timestamp: Double?, _format: String?): String {
 //

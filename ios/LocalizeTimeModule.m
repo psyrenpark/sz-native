@@ -16,5 +16,11 @@
                 resolve:  (RCTPromiseResolveBlock)resolve
                 rejecter: (RCTPromiseRejectBlock)reject
 )
-//  RCT_EXTERN_METHOD(setBrightness: (CGFloat)brightness)
+ RCT_EXTERN_METHOD(
+     getLocalizeTimeStringAsyncV2 : 
+                   (nonnull NSNumber *)_timestamp  
+                   _format:(NSString *)_format
+                resolve:  (RCTPromiseResolveBlock)resolve
+                rejecter: (RCTPromiseRejectBlock)reject
+)
 @end
